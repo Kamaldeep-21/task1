@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:solution1/models/food_models.dart';
-import 'package:solution1/models/shops_model.dart';
+
 
 class TabOne extends StatefulWidget {
   const TabOne({super.key});

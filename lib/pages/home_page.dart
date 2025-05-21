@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:solution1/models/food_models.dart';
 import 'package:solution1/models/shops_model.dart';
+import 'package:solution1/pages/second_page.dart';
 import 'package:solution1/pages/tab_one.dart';
 
 class HomePage extends StatefulWidget {
@@ -78,6 +79,49 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 15),
               TabOne(),
               SizedBox(height: 40),
+              Row(
+  children: [
+    Expanded(
+        
+        child: Container(
+          height: 2,
+          color: const Color.fromARGB(255, 227, 225, 225),
+        ),
+      ),
+    
+  ],
+),
+SizedBox(height: 10,),
+              GestureDetector(
+  onTap: () {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => SecondPage()),
+    );
+  },
+  child: Container(
+    height: 60,
+    decoration: BoxDecoration(
+      color: const Color.fromARGB(255, 119, 57, 34),
+      borderRadius: BorderRadius.circular(30),
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          "Next",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+  ),
+),
+
+              SizedBox(height: 10,),
             ],
           ),
         ),
